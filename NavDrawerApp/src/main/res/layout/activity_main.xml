@@ -18,7 +18,7 @@
         android:choiceMode="singleChoice"
         android:divider="@color/smooth_gray"
         android:dividerHeight="1dp"
-        android:background="@drawable/drawer_grad"/>
+        android:background="@color/white"/>
 
 </android.support.v4.widget.DrawerLayout>
 
