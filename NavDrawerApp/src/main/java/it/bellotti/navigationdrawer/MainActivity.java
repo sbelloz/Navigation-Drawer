@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import it.bellotti.navigationdrawer.fragments.DraftFragment;
 import it.bellotti.navigationdrawer.fragments.HomeFragment;
 import it.bellotti.navigationdrawer.fragments.InboxFragment;
 import it.bellotti.navigationdrawer.fragments.SentFragment;
@@ -175,6 +176,10 @@ public class MainActivity extends ActionBarActivity {
 
             case 2:
                 fragment = new SentFragment();
+                break;
+
+            case 3:
+                fragment = new DraftFragment();
                 break;
 
             default:
