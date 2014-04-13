@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello_world">Ciao Mondo!</string>
+    <string name="action_settings">Impostazioni</string>
+
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Posta in arrivo</item>
+        <item>Posta inviata</item>
+        <item>Bozze</item>
+    </string-array>
+
+
+
+</resources>
