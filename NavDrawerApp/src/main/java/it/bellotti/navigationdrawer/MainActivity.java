@@ -25,10 +25,10 @@ public class MainActivity extends ActionBarActivity {
 
 
     // drawer layout
-    private DrawerLayout mDrawerLayout;
+    private DrawerLayout drawerLayout;
 
     // drawer listview
-    private ListView mDrawerList;
+    private ListView drawerListView;
 
     // slide menu items
     private String[] navMenuTitles;
@@ -52,23 +52,23 @@ public class MainActivity extends ActionBarActivity {
 
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerListView = (ListView) findViewById(R.id.left_drawer);
 
         // Set the adapter for the list view
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+        drawerListView.setAdapter(new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, navMenuTitles));
         // Set the list's click listener
-        mDrawerList.setOnItemClickListener(new SlideMenuClickListener ());
+        drawerListView.setOnItemClickListener(new SlideMenuClickListener ());
 
         // enabling action bar app icon and behaving it as toggle button
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
 
         mDrawerToggle = new ActionBarDrawerToggle(
                 this, /* Context */
-                mDrawerLayout, /* DrawerLayout object */
+                drawerLayout, /* DrawerLayout object */
                 R.drawable.ic_drawer, /* nav menu toggle icon*/
                 R.string.app_name, /* nav drawer open - description for accessibility */
                 R.string.app_name /* nav drawer close - description for accessibility */
@@ -90,7 +90,7 @@ public class MainActivity extends ActionBarActivity {
         };
 
         // Set the drawer toggle as the DrawerListener
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        drawerLayout.setDrawerListener(mDrawerToggle);
 
         if (savedInstanceState == null) {
 //            on first time display view for first nav item
@@ -102,7 +102,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;
-        getActionBar().setTitle(mTitle);
+        getSupportActionBar().setTitle(mTitle);
     }
 
 
@@ -137,7 +137,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // if nav drawer is opened, hide the action items
-        boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
+        boolean drawerOpen = drawerLayout.isDrawerOpen(drawerListView);
         menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
@@ -192,10 +192,10 @@ public class MainActivity extends ActionBarActivity {
                     .replace(R.id.frame_container, fragment).commit();
 
             // update selected item and title, then close the drawer
-            mDrawerList.setItemChecked(position, true);
-            mDrawerList.setSelection(position);
+            drawerListView.setItemChecked(position, true);
+            drawerListView.setSelection(position);
             setTitle(navMenuTitles[position]);
-            mDrawerLayout.closeDrawer(mDrawerList);
+            drawerLayout.closeDrawer(drawerListView);
         } else {
             // error in creating fragment
             Log.e("MainActivity", "Error in creating fragment");
