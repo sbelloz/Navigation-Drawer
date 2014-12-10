@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">DrawerSample</string>
+    <string name="app_name">NavDrawerSample</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Inbox</item>
+        <item>Sent</item>
+        <item>Draft</item>
+    </string-array>
+
+    <string name="home">Home</string>
+    <string name="draft">Drafts</string>
+    <string name="inbox">Inbox</string>
+    <string name="sent">Sent</string>
 
 </resources>

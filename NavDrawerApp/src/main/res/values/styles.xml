@@ -5,4 +5,7 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="AppThemeBase" parent="AppTheme">
+        <item name="colorPrimary">@color/blue_500</item>
+    </style>
 </resources>

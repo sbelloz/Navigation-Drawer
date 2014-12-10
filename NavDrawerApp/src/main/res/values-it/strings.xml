@@ -11,6 +11,9 @@
         <item>Bozze</item>
     </string-array>
 
-
+    <string name="home">Home</string>
+    <string name="draft">Bozze</string>
+    <string name="inbox">Inbox</string>
+    <string name="sent">Inviati</string>
 
 </resources>

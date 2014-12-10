@@ -7,5 +7,6 @@
 
     <color name="gradient_start">#797a80</color>
     <color name="gradient_end">#e3dfe3</color>
+    <color name="blue_500">#5677fc</color>
 
 </resources>

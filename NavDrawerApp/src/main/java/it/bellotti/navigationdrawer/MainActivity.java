@@ -1,12 +1,12 @@
 package it.bellotti.navigationdrawer;
 
 import android.content.res.Configuration;
-import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
         drawerListView.setAdapter(new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, navMenuTitles));
         // Set the list's click listener
-        drawerListView.setOnItemClickListener(new SlideMenuClickListener ());
+        drawerListView.setOnItemClickListener(new SlideMenuClickListener());
 
         // enabling action bar app icon and behaving it as toggle button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -69,25 +69,25 @@ public class MainActivity extends ActionBarActivity {
         mDrawerToggle = new ActionBarDrawerToggle(
                 this, /* Context */
                 drawerLayout, /* DrawerLayout object */
-                R.drawable.ic_drawer, /* nav menu toggle icon*/
                 R.string.app_name, /* nav drawer open - description for accessibility */
                 R.string.app_name /* nav drawer close - description for accessibility */
-        ){
-
-            /** Called when a drawer has settled in a completely closed state. */
-            public void onDrawerClosed(View view) {
-                setTitle(mTitle);
-//                calling onPrepareOptionsMenu() to show action bar icons
-                invalidateOptionsMenu();
-            }
-
-            /** Called when a drawer has settled in a completely open state. */
-            public void onDrawerOpened(View drawerView) {
-                setTitle(mDrawerTitle);
-//                calling onPrepareOptionsMenu() to hide action bar icons
-                invalidateOptionsMenu();
-            }
-        };
+        );
+//        {
+//
+//            /** Called when a drawer has settled in a completely closed state. */
+//            public void onDrawerClosed(View view) {
+//                setTitle(mTitle);
+////                calling onPrepareOptionsMenu() to show action bar icons
+//                invalidateOptionsMenu();
+//            }
+//
+//            /** Called when a drawer has settled in a completely open state. */
+//            public void onDrawerOpened(View drawerView) {
+//                setTitle(mDrawerTitle);
+////                calling onPrepareOptionsMenu() to hide action bar icons
+//                invalidateOptionsMenu();
+//            }
+//        };
 
         // Set the drawer toggle as the DrawerListener
         drawerLayout.setDrawerListener(mDrawerToggle);
@@ -156,7 +156,9 @@ public class MainActivity extends ActionBarActivity {
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-    private class SlideMenuClickListener  implements ListView.OnItemClickListener {
+    private class SlideMenuClickListener
+            implements ListView.OnItemClickListener {
+
         @Override
         public void onItemClick(AdapterView parent, View view, int position, long id) {
             selectFragment(position);

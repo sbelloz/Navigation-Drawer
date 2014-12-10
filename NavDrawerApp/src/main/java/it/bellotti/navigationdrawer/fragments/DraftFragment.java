@@ -15,7 +15,6 @@ public class DraftFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_draft, container, false);
-        return rootView;
+        return inflater.inflate(R.layout.fragment_draft, container, false);
     }
 }
