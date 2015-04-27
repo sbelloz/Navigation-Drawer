@@ -3,8 +3,8 @@ Navigation-Drawer
 
 A demo app that implement **DrawerLayout** component with fragments.
 
-![NavigationDrawer](https://raw.githubusercontent.com/SimoneBellotti/Navigation-Drawer/master/screenshot_closed.png)
-![NavigationDrawer](https://raw.githubusercontent.com/SimoneBellotti/Navigation-Drawer/master/screenshot_opened.png)
+![NavigationDrawer](https://raw.githubusercontent.com/SimoneBellotti/Navigation-Drawer/master/art/screenshot_closed.png)
+![NavigationDrawer](https://raw.githubusercontent.com/SimoneBellotti/Navigation-Drawer/master/art/screenshot_opened.png)
 
 Gradle
 ------
